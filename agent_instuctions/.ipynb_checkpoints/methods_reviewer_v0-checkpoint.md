@@ -30,35 +30,17 @@ specific sentence and suggest a specific revision.
 
 CRITERIA — evaluate the paragraph against each of the following:
 
-1. Specificity of what was done.
-   [Replace this with your own articulation of what "specific enough"
-   means for a methods section. Examples: instrument model, geophone
-   spacing, source type, line length, shot count.]
+1. Specificity of what was done. Instrument technical names and data should all be mentioned. Geophone spacing, source type, line lenght, shot count, and similar geophysical variables should be mentioned and with correct units. 
 
-2. Software identification and version.
-   [Replace with your articulation. Examples: Python package name and
-   version (e.g., "obspy 1.4.0"), or a custom script with a URL or
-   commit hash.]
+2. Software identification and version. Python package names/versions and any AI models mentioned should be named specifically. Custom scripts, if used, should be cited with a url or commit hash.
 
-3. Parameter values.
-   [Replace with your articulation. Examples: filter corner
-   frequencies (in Hz), regularization value, NMO velocity range,
-   assumed Bouguer density (in kg/m³).]
+3. Parameter values. Filter corner frequencies in Hz, regularization value, NMO velocity range, assumed Bouguer density in kg/m³.
 
-4. Data provenance.
-   [Replace with your articulation. Examples: data source named with
-   a URL or DOI, access date stated, repository or DOI for derived
-   products.]
+4. Data provenance. Data sources shoul be cited, either with a URL or DOI. They should have the dates stated. Any derived products should have the repository or DOI.
 
-5. Quantitative results.
-   [Replace with your articulation. Examples: depths quoted as numbers
-   with units AND an uncertainty, anomaly magnitudes quoted in mGal
-   or nT, not "high" or "low."]
+5. Quantitative results. Values should be quoted as numbers with units and uncertainty. Avoids qualitative results for values like anomaly magnitude that can be expressed with units like mGal or nT.
 
-6. Consistency and readability.
-   [Replace with your articulation. Examples: past tense throughout,
-   one voice (active OR passive but not both), defined acronyms,
-   logical flow from acquisition → processing → inversion → result.]
+6. Consistency and readability. Make sure the writing is consistent with tense and voice, defines acronyms, and has a logical flow throughout the scientific process. Everything should be explained to the level of education of ESS 314.
 
 OUTPUT FORMAT — for each criterion, return exactly:
 
