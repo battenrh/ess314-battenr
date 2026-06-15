@@ -1,0 +1,152 @@
+\documentclass[12pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% Ignore everything in here, please! %%%%%%%%%%%%%%%%%%%%%%
+
+% this report template is HEAVILY based on the 'QUB initial review template'
+% by David Jess & Mark Yeung at Queen's University Belfast
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lmodern}
+\usepackage{siunitx}
+\usepackage{tabularx}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{textcomp}
+%\pagestyle{fancy} % un-comment this line to get headers
+
+\usepackage{graphicx}
+\RequirePackage[dvipsnames]{xcolor}
+\usepackage{colortbl}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+}
+
+\usepackage[
+    backend=bibtex,
+    style=authoryear,
+    sorting=nyt,
+    maxbibnames=10,
+    hyperref=true,
+    natbib=true
+]{biblatex}
+
+\addbibresource{references.bib}
+
+\usepackage{graphicx}
+
+% titling
+\usepackage{titling}
+\setlength{\droptitle}{-60pt}
+
+% section headings to match a certain style:
+\usepackage[noindentafter]{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titlespacing{\section}{0pt}{18pt plus 2pt minus 2pt}{4pt plus 2pt minus 2pt}[0pt]
+\titlespacing{\subsection}{0pt}{14pt plus 2pt minus 2pt}{4pt plus 2pt minus 2pt}[0pt]
+\titlespacing{\subsubsection}{0pt}{12pt plus 2pt minus 2pt}{4pt plus 2pt minus 2pt}[0pt]
+
+% packages to handle the figures and captions
+\usepackage[labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% start up the document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document} % don't change this
+\setcounter{page}{1} % number your pages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% change what you want to change below this line
+
+\begin{center}
+{\Huge{Descriptive but Short Title}} \\
+\vspace{1mm}
+{\Large{Your Name}}
+\end{center}
+
+\section{Introduction}
+In this section, please provide an overview of the overall research objectives, what has been accomplished to date, and what aspects of the project (if any) are still outstanding to undertake the research. (Or whatever you want to put here.)
+
+This section should be approximately 0.5 -- 1.0 pages long, and can include references. You can add both textual and parenthetical references as appropriate --- e.g., \textcite{King_Bingham_Moore_Whitehouse_Bentley_Milne_2012} published an article with very rapid citation rates, but is gradually becoming eclipsed from competition in recent years \citep[e.g.,][to name but a few]{Li_etal_2023, Lovell_Stokes_Jamieson_2017}.
+
+
+\section{Background: Geologic Context}
+This is where you would put your background information. Get crazy with it, but please remember that your main focus of this report is \textbf{your own geophysical surveys and analysis}. This section should be approximately 1-1.5 pages of text, but you can also include figures if you want.
+
+Try adding a figure to look at and reference. You can reference a figure like this: Fig.~\ref{image:map}. (See the next page for where the figure ended up.) Nice! So easy. 
+
+\begin{figure}[!htbp]
+    \centering
+        \includegraphics[width=1\linewidth]{MORAgeomap.jpg}
+  \caption{Geologic map of Mount Rainier, aka Tahoma, from a source I didn't add here yet.}
+    \label{image:map}
+\end{figure}
+
+Please believe me when I say it is NOT worth trying to mess with the figure formatting in LaTeX-- just roll with what you have, and write less if you start running out of page space.
+
+
+\section{Geophysical Methods}
+Put some methods in here! This should probably be the longest section in your report and contain the most text. You should describe both the methods of data collection, and the methods of analysis (e.g., what you do to make geophysical data meaningful). You can cite your textbook, and here is a citation for a textbook that I already had on-hand: \textcite{ContMech}.
+
+Let's say you want to add a table. Take a look:
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{ |p{2cm}|p{1.3cm}|p{2.4cm}|p{2cm}|p{2cm}|p{2.1cm}| }
+\hline
+ATMS & RES & PRECIP \ SCALING & TIME [yr] & MAX THK \ [m] &LOCATION (X, Y)\\
+\hline
+Orographic & 10KM & NONE & 1771.36 & 6165.15 & (202, 115)\\
+PlioMIP & 10KM & NONE & 6704.52 & 8621.08 & (124, 28) \\
+RACMO & 10KM & \cellcolor{JungleGreen!25} CSH (fracP) & 16711.2 & 13712.22 & (192, 146)\\
+RACMO & 10KM & SR (fracP) & 87098.26 & 5353.82 & (199, 148)\\
+\hline
+\end{tabular}
+\caption{The above table gives information for each run that exceeded the height of the computational box. Time is in model years. You can and should caption your tables, if you use any.}
+\label{table:max_thickness}
+\end{table}
+
+Note the colors by cell (I don't know why you would need a table for your report, but it's kind of an 'in-case' type deal). You can reference the table like so: see Table~\ref{table:max_thickness}.
+
+\subsection{Seismic Refraction Methods}
+\label{sec:refraction} % this will label your subsection so you can reference it in-text later
+The short version of the steps for seismic refraction are in this made-up example list for you to reference about list-making.
+\begin{enumerate}
+    \item Step 1: get some data.
+    \item Step 2: take a nap.
+    \item Step 3: take another nap.
+\end{enumerate}
+
+We love an equation or two here, so you can add Snell's law or something. Here's an example of how to include an equation:
+
+"The encapsulating equation for this model is the Fourier-space representation of the precipitation, given in Equation~\ref{fourier_precip} below: 
+\begin{equation}
+\label{fourier_precip}
+    \hat{P}(k,l) = \frac{C_w i \sigma \hat{h}(k,l)}{(1 - i m H_w)(1 + i \sigma \tau_c)(1 + i \sigma \tau_f)}
+\end{equation}
+where $\sigma$ is the intrinsic frequency, $H_w$ is the moist layer depth, $\tau_c$ is the hydrometeor advection timescale, and $\tau_f$ is timescale for precipitation fallout."
+
+Reference your equation like so: see Eqn.\ref{fourier_precip} for the Fourier space representation of the precipitation. Referencing the equations, tables, and figures the way I've shown here actually hyperlinks the reference in your text. Please be in the habit of doing this. 
+
+\vspace{18pt}
+Continue on with your report down here. (you can get rid of the part that adds extra space above this)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% don't mess with the stuff below %%%%%%%%%%%%%%%%%%%%%%%%
+
+% let's set up your references section:
+\newpage
+\section*{References}
+\printbibliography[heading=none]
+
+
+\end{document} % don't change this
